@@ -1,38 +1,44 @@
+* {
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+}
+
 header {
-    border: 1px solid black;
-    height: 300px;
-    width: 80%;
-    margin: 15px auto;
-    font-size: 20px;
-    text-align: center;
+    margin: 2vw 0vw 0vw 0vw;
+    padding-bottom: 1vw;
 }
 
-body {
-    background-color: yellow;
-}
-.underscores {
-    border: 1px solid black;
-    height: 150px;
-    width: 80%;
-    margin: 50px auto;
-    font-size: 100px;
-    text-align: center;
+/* 2018 World Cup FIFA Logo */
+.fifa {
+    width: 11%;
 }
 
-.rightGuess {
-    border: 1px solid black;
-    height: 150px;
-    width: 80%;
-    margin: 50px auto;
-    font-size: 20px;
-    text-align: center;
+h1 {
+    color: yellow;
+    font-size: 3.5vw;
+    text-shadow: 5px 5px 5px white;
 }
 
-.wrongGuess {
-    border: 1px solid black;
-    height: 150px;
-    width: 80%;
-    margin: 50px auto;
-    font-size: 20px;
-    text-align: center;
+h2 {
+    font-size: 2.5vw;
+    text-shadow: 3px 3px 3px yellow;
+}
+
+.jumbotron {
+    background-color: black;
+}
+
+.col-sm-4 {
+    border: 0.3vw dashed white;
+    height: 100vh; /*modify required */
+}
+
+p {
+    font-size: 1.2vw;
+}
+
+#first-p {
+    padding-top: 1vw;
 }
