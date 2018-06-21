@@ -11,8 +11,14 @@ header {
 }
 
 /* 2018 World Cup FIFA Logo */
-.fifa {
+#fifa {
     width: 11%;
+}
+
+/* Initial Image on Left side of Column */
+#world-cup {
+    width: 95%;
+    padding-top: 1vw;
 }
 
 h1 {
@@ -32,13 +38,23 @@ h2 {
 
 .col-sm-4 {
     border: 0.3vw dashed white;
-    height: 100vh; /*modify required */
+    height: 100vh;
 }
 
 p {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
 }
 
 #first-p {
     padding-top: 1vw;
+}
+
+#numWins, #underScore {
+    color: lightblue;
+    font-size: 2.5vw;
+}
+
+#numGuessesRemaining, #wrongGuess {
+    color: lightcoral;
+    font-size: 2.5vw;
 }
