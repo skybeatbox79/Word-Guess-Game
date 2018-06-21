@@ -19,6 +19,11 @@ header {
 #world-cup {
     width: 95%;
     padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+#list {
+    width: 95%;
 }
 
 h1 {
