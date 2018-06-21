@@ -3,30 +3,33 @@ var teams = ["argentina", "austrailia", "belgium", "brazil", "colombia", "costar
 var chosenTeam = "";
 var lettersInChosenTeam = [];
 var numBlanks = 0;
-var blanksAndSuccesses = [];
+var currentStatus = [];
 var wrongGuesses = [];
-
 var winCounter = 0;
 var numGuesses = 10;
 
+// Functions
+
+// To start a (new) game
 function newGame() {
     numGuesses = 10;
     chosenTeam = teams[Math.floor(Math.random() * teams.length)];
     lettersInChosenTeam = chosenTeam.split("");
     numBlanks = lettersInChosenTeam.length;
 
-    blanksAndSuccesses = [];
+    currentStatus = [];
     wrongGuesses= [];
 
     for (var i = 0; i < numBlanks; i++) {
-        blanksAndSuccesses.push("_");
+        currentStatus.push("_");
     }
     
     document.getElementById("numGuessesRemaining").innerHTML = numGuesses;
-    document.getElementById("underScore").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("underScore").innerHTML = currentStatus.join(" ");
     document.getElementById("wrongGuess").innerHTML = wrongGuesses.join(" ");
 }
 
+// Check letters from answer and apply functions for the amount of guesses
 function checkLetters(letter) {
     var letterInTeam = false;
 
@@ -39,7 +42,7 @@ function checkLetters(letter) {
     if (letterInTeam) {
         for (i = 0; i < numBlanks; i++) {
             if (chosenTeam[i] === letter) {
-                blanksAndSuccesses[i] = letter;
+                currentStatus[i] = letter;
             }
         }
     } else {
@@ -48,12 +51,13 @@ function checkLetters(letter) {
     }
 }
 
+// Alert message based on the result and rest the game
 function gameSet() {
     document.getElementById("numGuessesRemaining").innerHTML = numGuesses;
-    document.getElementById("underScore").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("underScore").innerHTML = currentStatus.join(" ");
     document.getElementById("wrongGuess").innerHTML = wrongGuesses.join(" ");
 
-    if (lettersInChosenTeam.toString() === blanksAndSuccesses.toString()) {
+    if (lettersInChosenTeam.toString() === currentStatus.toString()) {
         winCounter++;
         alert("GOAL GOAL GOAL!!!!!");
 
@@ -67,8 +71,10 @@ function gameSet() {
     }
 }
 
+// To start a new game
 newGame();
 
+// To run the codes for the game
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);

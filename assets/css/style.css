@@ -48,6 +48,7 @@ h2 {
 
 p {
     font-size: 1.5vw;
+    font-family: 'Permanent Marker', cursive;
 }
 
 #first-p {
@@ -56,10 +57,10 @@ p {
 
 #numWins, #underScore {
     color: lightblue;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
 
 #numGuessesRemaining, #wrongGuess {
     color: lightcoral;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
