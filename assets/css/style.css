@@ -19,6 +19,7 @@
 
 #fifa2 {
     width: 95%;
+    margin-bottom: 1vw;
 }
 
 /* Style */
@@ -38,24 +39,16 @@ h2 {
     text-shadow: 3px 3px 3px yellow;
 }
 
-h3 {
-    font-size: 1.1vw;
-    color: lightgreen;
-    text-shadow: 2px 2px 2px white;
-}
-
-h4 {
-    font-size: 1.3vw;
-    text-shadow: 2px 2px 2px lightgreen;
-}
-
 .jumbotron {
     background-color: black;
 }
 
+.container {
+    height: auto;
+}
+
 .col-sm-4 {
     border: 0.3vw dashed white;
-    height: 100vh;
 }
 
 p {
